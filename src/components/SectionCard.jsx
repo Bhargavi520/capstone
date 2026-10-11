@@ -1,0 +1,16 @@
+export default function SectionCard({ title, subtitle, action, children, className = "" }) {
+  return (
+    <section className={`section-card ${className}`}>
+      {(title || action) && (
+        <div className="section-card-header">
+          <div>
+            {title && <h3>{title}</h3>}
+            {subtitle && <p>{subtitle}</p>}
+          </div>
+          {action}
+        </div>
+      )}
+      {children}
+    </section>
+  );
+}
